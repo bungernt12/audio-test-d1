@@ -1,7 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import sound from "./assets/AMD.mp3";
 
 function App() {
+  function handleButtonClick() {
+    new Audio(sound).play();
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleButtonClick}>Play sound</button>
       </header>
     </div>
   );
